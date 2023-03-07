@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleHiragana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:layout_column="2"
+        android:text="@string/Hiragana"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/titleKatakana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:text="@string/Katakana"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleHiragana">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/hiraganaTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <!-- Row 1 -->
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaA"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginEnd="0dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/a"
+                        android:contentDescription="@string/a"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaI"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/i"
+                        android:contentDescription="@string/i"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaU"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/u"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/u" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaE"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/e"
+                        android:contentDescription="@string/e"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaO"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/o"
+                        android:contentDescription="@string/o"/>
+                </TableRow>
+
+
+                <!-- Row 2 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaKa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ka"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ka" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaKi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ki"
+                        android:contentDescription="@string/ki"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaKu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ku"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ku" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaKe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ke"
+                        android:contentDescription="@string/ke"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaKo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ko"
+                        android:contentDescription="@string/ko"/>
+                </TableRow>
+
+                <!-- Row 3 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaSa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/sa"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/sa" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaShi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/shi"
+                        android:contentDescription="@string/shi"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaSu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/su"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/su" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaSe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/se"
+                        android:contentDescription="@string/se"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaSo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/so"
+                        android:contentDescription="@string/so"/>
+                </TableRow>
+
+                <!-- Row 4 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaTa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ta"
+                        android:contentDescription="@string/ta"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaChi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/chi"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/chi" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaTsu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/tsu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/tsu" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaTe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/te"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/te" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaTo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/to"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/to" />
+                </TableRow>
+
+                <!-- Row 5 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaNa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/na"
+                        android:contentDescription="@string/na"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaNi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ni"
+                        android:contentDescription="@string/ni"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaNu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/nu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/nu" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaNe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ne"
+                        android:contentDescription="@string/ne"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaNo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/no"
+                        android:contentDescription="@string/no"/>
+                </TableRow>
+
+                <!-- Row 6 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaHa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ha"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ha" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaHi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hi"
+                        android:contentDescription="@string/hi"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaFu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/fu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/fu" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaHe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/he"
+                        android:contentDescription="@string/he"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaHo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ho"
+                        android:contentDescription="@string/ho"/>
+                </TableRow>
+
+                <!-- Row 7 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border">
+                    <ImageButton
+                        android:id="@+id/btnHiraganaMa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ma"
+                        android:contentDescription="@string/ma"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaMi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/mi"
+                        android:contentDescription="@string/mi"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaMu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/mu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/mu" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaMe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/me"
+                        android:contentDescription="@string/me"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaMo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/mo"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/mo" />
+                </TableRow>
+
+                <!-- Row 8 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaYa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ya"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ya" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/empty"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaYu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/yu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/yu" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/empty"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaYo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/yo"
+                        android:contentDescription="@string/yo"/>
+                </TableRow>
+
+                <!-- Row 9 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaRa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ra"
+                        android:contentDescription="@string/ra"/>
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaRi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ri"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ri" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaRu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ru"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ru" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaRe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/re"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/re" />
+
+
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaRo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ro"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ro" />
+
+                </TableRow>
+
+                <!-- Row 10 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaWa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/wa"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/wa" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/empty"/>
+
+                    <ImageButton
+
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaWo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/wo"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/wo" />
+
+                </TableRow>
+
+                <!-- Row 11 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnHiraganaN"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/n"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/n" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/katakanaTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <!-- Row 1 -->
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaA"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/katakana_a"
+                        android:contentDescription="@string/a"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaI"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_i"
+                        android:contentDescription="@string/i"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaU"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/u"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_u" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaE"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_e"
+                        android:contentDescription="@string/e"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaO"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_o"
+                        android:contentDescription="@string/o"/>
+                </TableRow>
+
+
+                <!-- Row 2 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaKa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ka"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ka" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaKi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ki"
+                        android:contentDescription="@string/ki"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaKu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="ku"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ku" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaKe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ke"
+                        android:contentDescription="@string/ke"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaKo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ko"
+                        android:contentDescription="@string/ko"/>
+                </TableRow>
+
+                <!-- Row 3 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaSa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/sa"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_sa" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaShi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_shi"
+                        android:contentDescription="@string/shi"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaSu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/su"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_su" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaSe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_se"
+                        android:contentDescription="@string/se"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaSo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_so"
+                        android:contentDescription="@string/so"/>
+                </TableRow>
+
+                <!-- Row 4 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaTa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ta"
+                        android:contentDescription="@string/ta"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaChi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/chi"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_chi" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaTsu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/su"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_tsu" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaTe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/te"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_te" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaTo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/to"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_to" />
+                </TableRow>
+
+                <!-- Row 5 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaNa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_na"
+                        android:contentDescription="@string/na"/>
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaNi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ni"
+                        android:contentDescription="@string/ni"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaNu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/nu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_nu" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaNe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ne"
+                        android:contentDescription="@string/ne"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaNo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_no"
+                        android:contentDescription="@string/no"/>
+                </TableRow>
+
+                <!-- Row 6 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaHa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ha"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ha" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaHi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_hi"
+                        android:contentDescription="@string/hi"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaFu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/fu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_fu" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaHe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_he"
+                        android:contentDescription="@string/he"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaHo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ho"
+                        android:contentDescription="@string/ho"/>
+                </TableRow>
+
+                <!-- Row 7 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaMa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ma"
+                        android:contentDescription="@string/ma"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaMi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_mi"
+                        android:contentDescription="@string/mi"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaMu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/mu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_mu" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaMe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_me"
+                        android:contentDescription="@string/me"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaMo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/mo"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_mo" />
+                </TableRow>
+
+                <!-- Row 8 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaYa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ya"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ya" />
+
+                    <ImageButton
+
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/empty"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaYu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/yu"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_yu" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/empty"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaYo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_yo"
+                        android:contentDescription="@string/yo"/>
+                </TableRow>
+
+                <!-- Row 9 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaRa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ra"
+                        android:contentDescription="@string/ra"/>
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaRi"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ri"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ri" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaRu"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ru"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ru" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaRe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/re"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_re" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaRo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/ro"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_ro" />
+                </TableRow>
+
+                <!-- Row 10 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaWa"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/wa"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_wa" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="@string/empty"
+
+                        />
+
+                    <ImageButton
+
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:id="@+id/btnKatakanaWo"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/wo"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_wo" />
+                </TableRow>
+
+                <!-- Row 11 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/border">
+                    <ImageButton
+                        android:id="@+id/btnKatakanaN"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/n"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/katakana_n" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/border"
+                        android:contentDescription="@string/empty"
+                        android:scaleType="fitCenter" />
+                </TableRow>
+
+            </TableLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="@string/Hiragana"
+        android:textOn="@string/Katakana"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:showText="true"
+        app:track="@drawable/track"
+        android:contentDescription="@string/changeTable"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
